@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "python-tdlib"
+version = "0.1.0"
+description = ""
+authors = ["vladislav.vasilenko <vladislav.vasilenko@glowbyteconsulting.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.10.2"
+pydantic-settings = "^2.6.1"
+aiotdlib = "^0.24.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
