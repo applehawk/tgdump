@@ -10,6 +10,8 @@ class Config(BaseSettings):
     API_ID: str = ""
     API_HASH: str = ""
     PHONE_NUMBER: str = ""
+    ANTHROPIC_API: str = ""
+    TG_AUTH_TOKEN: str = ""
 
     model_config = SettingsConfigDict(
         env_file=".env",
