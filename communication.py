@@ -14,18 +14,22 @@ from helpers import load_messages_day_by_day, filter_only_messagetext
 import asyncio
 
 class GroupChatScrapper:
-    async def close_async(self):
+    async def startClient(self):
+        await self.client.start()
+
+    async def async_stop(self):
         # Асинхронный метод завершения
         await self.client.api.close()
+        await self.client.stop()
 
-    def sync_close(self):
+    def stopClient(self):
         # Запуск асинхронного метода через asyncio
         loop = asyncio.get_event_loop()
         if loop.is_running():
             # Если цикл уже запущен (например, в приложении с асинхронным сервером)
-            asyncio.ensure_future(self.close_async())
+            asyncio.ensure_future(self.async_stop())
         else:
-            loop.run_until_complete(self.close_async())
+            loop.run_until_complete(self.async_stop())
 
     def __init__(self):
         self.client = Client(

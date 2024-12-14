@@ -1,16 +1,5 @@
 {
-    "chats_to_summarize": [
-        {
-            "id": "-1002323430668", 
-            "lookback_days": 7,
-            "summarization_prompt_path": "./prompts/summarization_prompt.txt"
-        },
-        {
-            "id": "-1002182434362", 
-            "lookback_days": 20,
-            "summarization_prompt_path": "./prompts/summarization_prompt.txt"
-        }
-    ],
+    "chats_to_summarize": [],
     "telegram_summary_receivers": [
         "vsvladis", "zaitsevmishka", "alexnefimov", "architector21", "MLOpser", "DmitryMazur", "Lemsonya", "GusAndrew", "Dmitry_abcd"
     ]

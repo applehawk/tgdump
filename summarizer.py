@@ -7,6 +7,8 @@ from langchain_core.messages import SystemMessage
 from langchain_anthropic import ChatAnthropic
 from langchain.chains.llm import LLMChain
 from langchain.memory import ConversationBufferMemory
+from langchain.globals import set_debug
+set_debug(True)
 
 class Summarizer:
     def __init__(self, anthropic_key: str):
