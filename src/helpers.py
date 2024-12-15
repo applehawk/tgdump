@@ -1,7 +1,6 @@
 from typing import AsyncGenerator, List
 from aiotdlib import Client
 from aiotdlib.api import Messages, MessageText, Message
-import tgdump
 from datetime import datetime, UTC
 
 def filter_only_messagetext(messages: List[Message]) -> List[Message]:

@@ -1,17 +1,15 @@
-import atexit
-from datetime import datetime, timedelta, timezone
-import threading
-import time
-import logging
-from config import config
-from aiotdlib import Client, ClientSettings
-from aiotdlib.api import Message, MessageSender, MessageSenderUser, MessageSenderChat, User, Chat, MessageReplyToMessage
-from aiotdlib.api import API, UpdateNewMessage, UpdateNewChat, MessageText
 from typing import List, Tuple
-from handlers import register_handlers
-import tgdump
-from helpers import load_messages_day_by_day, filter_only_messagetext
 import asyncio
+from datetime import datetime, timedelta, timezone
+from aiotdlib import Client, ClientSettings
+from aiotdlib.api import Message, MessageSender
+from aiotdlib.api import MessageSenderUser, MessageSenderChat
+from aiotdlib.api import User, Chat, MessageReplyToMessage
+
+from config import config
+from handlers import register_handlers
+from helpers import load_messages_day_by_day, filter_only_messagetext
+import src.tgdump as tgdump
 
 class GroupChatScrapper:
     async def startClient(self):

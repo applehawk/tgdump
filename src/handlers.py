@@ -1,7 +1,8 @@
 import logging
+import src.tgdump as tgdump
 from aiotdlib import Client
 from aiotdlib.api import API, UpdateNewMessage, UpdateNewChat, UpdateChatPosition, Messages, MessageText, MessageSenderUser
-import tgdump
+
 from helpers import load_all_messages_backward, load_messages_day_by_day
 from sbertprocessor import process_sentences
 

@@ -1,7 +1,7 @@
 import signal
 import sys
-from config import config
-import tgdump
+from src.config import config
+import src.tgdump as tgdump
 
 import logging
 logging.basicConfig(level=logging.INFO)

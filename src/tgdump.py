@@ -4,7 +4,7 @@ from aiotdlib.api import Vector, Message, MessageText, MessageSender, MessageSen
 from helpers import filter_only_messagetext
 
 # Создаем или подключаемся к базе данных
-conn = sqlite3.connect("tgdump.db")
+conn = sqlite3.connect("../tgdump.db")
 cursor = conn.cursor()
 
 # Создаем таблицу Chats
